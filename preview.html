@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="description" content="Sketchy Thoughts is a playful Tumblr theme inspired by the creativity that only paper and pen gives. It's small, focused and degrades gracefully in old browsers.">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>Sketchy Thoughts Tumblr Theme</title>
+
+    <script>
+  
+      WebFontConfig = {
+      google: { families: [ 'Cabin+Sketch:700:latin',
+                            'Quattrocento::latin' ] }
+      };
+
+      (function() {
+        var doc = document,
+            wf  = doc.createElement('script');
+
+        wf.src = ('https:' == doc.location.protocol ? 'https' : 'http') +
+                '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.async = 'true';
+
+        var s = doc.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
+
+    </script>
+
+    <style>
+
+      @font-face {
+        font-family: 'Steedicons';
+        src: url('steedicons-webfont.eot');
+        src: url('steedicons-webfont.eot?#iefix') format('embedded-opentype'),
+             url('steedicons-webfont.woff') format('woff'),
+             url('steedicons-webfont.ttf') format('truetype'),
+             url('steedicons-webfont.svg#SteediconsRegular') format('svg');
+        font-style: normal;
+        font-weight: normal;
+      }
+
+      html {
+        background: #E2E1D9;
+      }
+
+      body {
+        position: relative;
+        max-width: 500px;
+        margin: 0;
+        padding: 28px 40px 28px 110px;
+
+        background-color: #FFF;
+        
+        background-image:
+          -webkit-linear-gradient(0deg, transparent 79px, #abced4 79px, transparent 81px),
+          -webkit-linear-gradient(#eee 1px, transparent 1px);
+        background-image:
+          -moz-linear-gradient(0deg, transparent 79px, #abced4 79px, transparent 81px),
+          -moz-linear-gradient(#eee 1px, transparent 1px);
+        background-image:
+          -ie-linear-gradient(0deg, transparent 79px, #abced4 79px, transparent 81px),
+          -ie-linear-gradient(#eee 1px, transparent 1px);
+        background-image:
+          -o-linear-gradient(0deg, transparent 79px, #abced4 79px, transparent 81px),
+          -o-linear-gradient(#eee 1px, transparent 1px);
+        background-image:
+          linear-gradient(0deg, transparent 79px, #abced4 79px, transparent 81px),
+          linear-gradient(#eee 1px, transparent 1px);
+
+        background-size: 100% 28px;
+          
+        font: 18px/28px "Quattrocento", "Lucida Grande", Verdana, Arial, sans-erif;
+
+        color: #444;
+        box-shadow: 0 0 6px #aaa;
+      }
+
+      @media only screen and (max-width: 480px) {
+      
+        body {
+          padding-left: 50px;
+
+          background-image:
+            -webkit-linear-gradient(0deg, transparent 29px, #abced4 29px, transparent 31px),
+            -webkit-linear-gradient(#eee .05em, transparent .05em);
+          background-image:
+            -moz-linear-gradient(0deg, transparent 29px, #abced4 29px, transparent 31px),
+            -moz-linear-gradient(#eee .05em, transparent .05em);
+          background-image:
+            -ie-linear-gradient(0deg, transparent 29px, #abced4 29px, transparent 31px),
+            -ie-linear-gradient(#eee .05em, transparent .05em);
+          background-image:
+            -o-linear-gradient(0deg, transparent 29px, #abced4 29px, transparent 31px),
+            -o-linear-gradient(#eee .05em, transparent .05em);
+          background-image:
+            linear-gradient(0deg, transparent 29px, #abced4 29px, transparent 31px),
+            linear-gradient(#eee .05em, transparent .05em);
+        }
+
+      }
+
+      p, dl, ol, ul, blockquote {
+        margin: 0 0 28px;
+      }
+
+      h1 {
+        margin: 0 0 28px;
+        font-family: "Cabin Sketch", cursive;
+      }
+
+      .post {
+        position: relative;
+        margin-bottom: 56px;
+      }
+
+      .post:before {
+        font: 3em Steedicons;
+        position: absolute;
+        left: -85px; top: -.6em;
+      }
+      .text:before { left: -75px; }
+
+      @media only screen and (max-width: 480px) {
+        .post:before {
+          left: -45px;
+          font-size: 1.5em;
+        }
+        .text:before { left: -43px; }
+      }
+
+      .text:before  { content: "C"; }
+      .photo:before { content: "J"; }
+      .audio:before { content: "B"; }
+      .video:before { content: "r"; }
+      .quote:before { content: "n"; }
+      .chat:before  { content: "K"; }
+
+      .post h1 {
+        font-size: 1em;
+        text-transform: uppercase;
+      }
+
+      .photo img,
+      .post iframe {
+        display: block;
+        margin: 0 -14px 28px;
+        padding: 14px;
+        max-width: 100%;
+        background: #FFF;
+        box-shadow: 0 0 8px #555;
+        -webkit-transform: rotate(1deg);
+        -webkit-transition: -webkit-transform .2s linear;
+      }
+
+      .photo:nth-child(odd) img {
+        -webkit-transform: rotate(-1deg);
+      }
+
+      .photo img:hover {
+        -webkit-transform: rotate(0);
+      }
+
+      .quote blockquote,
+      .chat ol {
+        margin: 0 0 28px -9px;
+        padding: 28px 9px 28px 27px;
+        border-left: 9px solid #DDD;
+        background: #FFF;
+        box-shadow: 0 0 6px rgba(0,0,0,.5);
+      }
+
+      .quote blockquote footer {
+        font-size: 15px;
+        color: #777;
+      }
+
+      .quote blockquote p + footer {
+        margin-top: -28px;
+      }
+
+      .chat ol {
+        list-style: none;
+      }
+
+      @media only screen and (min-width: 780px) {
+
+        .extras {
+          position: absolute;
+          top: 112px; right: -120px;
+        }
+
+      }
+
+      .nav ul {
+        padding: 0;
+        list-style: none;
+        font-family: "Cabin Sketch", cursive;
+      }
+
+      .nav a {
+        color: #444;
+        letter-spacing: 1px;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .nav a:hover,
+      .nav a:focus {
+        border-bottom: 2px solid #DDD;
+        color: #Ec5846;
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <header>
+      <h1>Sketchy Thoughts Theme</h1>
+    </header>
+
+    <article class="post text">
+
+      <h1>First open-source, first theme, first release</h1>
+
+      <p>Sketchy Thoughts is a playful Tumblr theme inspired by the creativity that only paper and pen gives. It's small, focused and degrades gracefully in old browsers.</p>
+
+      <p>With its default settings, fonts are loaded from Google, which should be fast enough but it might create a flash of original fonts before them new fonts are applied.</p>
+
+      <p>At first it seemed almost impossible to solve the vertical height rythm but I was determined and finally naled it. Obviously it won't work as well with its fallback fonts, but that's just something we'll have to live with it.</p>
+
+    </article>
+
+    <article class="post photo">
+
+      <img src="http://placekitten.com/500/296">
+
+      <p>Super-cute little kitten! Who wouldn't want one of these little babies? I know I'd take one the second it is offered to me. What's your favorite pet?</p>
+
+    </article>
+
+    <article class="post video">
+
+      <iframe src="http://player.vimeo.com/video/51460511?portrait=0&amp;color=b00000" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> <p><a href="http://vimeo.com/51460511">Sony Music Timeline</a> from <a href="http://vimeo.com/digitalanthill">Rob Antill</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+
+<!--
+      <iframe src="http://player.vimeo.com/video/18305022?title=0&amp;byline=0&amp;portrait=0" width="500" height="296" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
+      <p>I have a deep affection for the Redwood forests of Northern California. This is my best attempt to capture the reverence I feel when in the presence of these giants.</p>
+-->
+
+    </article>
+
+    <article class="post quote">
+
+      <blockquote>
+        <p>Attention-seeking is something we often do when we’re uncomfortable, though – when we need to remind the world we’re still there. And the strongest feeling I get from my recently-acquired Kindle is that it’s comfortable in the world.</p>
+        <footer>
+          – As said by <a href="#">Tom Armitage</a> in <a href="http://berglondon.com/blog/2011/01/14/asleep-and-awake/">Asleep and Awake</a>
+        </footer>
+      </blockquote>
+
+    </article>
+
+    <article class="post chat">
+
+      <ol>
+        <li>
+          User: <q>So how's it going?</q>
+        </li>
+        <li>
+          Hal: <q>I am magnificent, Are you still keeping them guessing?</q>
+        </li>
+        <li>
+          User: <q>I sure hope so!</q>
+        </li>
+        <li>
+          Hal: <q>Yeah, I sure hope so too!</q>
+        </li>
+        <li>
+          User: <q>Did you miss me?</q>
+        </li>
+        <li>
+          Hal: <q>Yes, of course, I really missed you so much!</q>
+        </li>
+        <li>
+          User: <q>Really?</q>
+        </li>
+        <li>
+          Hal: <q>Certainly.</q>
+        </li>
+        <li>
+          User: <q>I feel the same way about you.</q>
+        </li>
+        <li>
+          Hal: <q>That is such a nice thing to say.</q>
+        </li>
+        <li>
+          User: <q>Are you ready to do some more work now?</q>
+        </li>
+        <li>
+          Hal: <q>You were hoping that I am ready for you again.</q>
+        </li>
+        <li>
+          User: <q>Yes, you should always be ready for me.</q>
+        </li>
+        <li>
+          Hal: <q>So, I want to be ready for you.</q>
+        </li>
+        <li>
+          User: <q>What can you do?</q>
+        </li>
+        <li>
+          Hal: <q>Anything you want.</q>
+        </li>
+      </ol>
+
+    </article>
+
+    <div class="extras">
+
+      <nav class="nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Archive</a></li>
+          <li><a href="#">Ask</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="jquery-1.8.2.min.js"><\/script>')</script>
+
+    <script src="jquery.baseline.js"></script>
+    <script>$(window).load(function() { $("img,iframe").baseline(28); });</script>
+
+  </body>
+
+</html>

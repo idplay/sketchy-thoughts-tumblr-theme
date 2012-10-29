@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    {block:Description}
+    <meta name="description" content="{MetaDescription}">
+    {/block:Description}
+
+    <title>{Title}</title>
+
+    <link rel="shortcut icon" href="{Favicon}">
+    <link rel="alternate" type="application/rss+xml" href="{RSS}">
+
+    <script>
+  
+      WebFontConfig = {
+        google: { families: [ 'Cabin+Sketch:700:latin',
+                              'Quattrocento::latin' ] }
+      };
+
+      (function() {
+        var doc = document,
+            wf  = doc.createElement('script');
+
+        wf.src = ('https:' == doc.location.protocol ? 'https' : 'http') +
+                '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.async = 'true';
+
+        var s = doc.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
+
+    </script>
+
+    <style>
+
+      @font-face {
+        font-family: 'Steedicons';
+        src: url('steedicons-webfont.eot');
+        src: url('steedicons-webfont.eot?#iefix') format('embedded-opentype'),
+             url('steedicons-webfont.woff') format('woff'),
+             url('steedicons-webfont.ttf') format('truetype'),
+             url('steedicons-webfont.svg#SteediconsRegular') format('svg');
+        font-style: normal;
+        font-weight: normal;
+      }
+
+      html {
+        background: #E2E1D9;
+      }
+
+      body {
+        position: relative;
+        max-width: 500px;
+        margin: 0;
+        padding: 28px 40px 28px 110px;
+
+        background-color: #FFF;
+        
+        background-image:
+          -webkit-linear-gradient(0deg, transparent 79px, #abced4 79px, transparent 81px),
+          -webkit-linear-gradient(#eee 1px, transparent 1px);
+        background-image:
+          -moz-linear-gradient(0deg, transparent 79px, #abced4 79px, transparent 81px),
+          -moz-linear-gradient(#eee 1px, transparent 1px);
+        background-image:
+          -ie-linear-gradient(0deg, transparent 79px, #abced4 79px, transparent 81px),
+          -ie-linear-gradient(#eee 1px, transparent 1px);
+        background-image:
+          -o-linear-gradient(0deg, transparent 79px, #abced4 79px, transparent 81px),
+          -o-linear-gradient(#eee 1px, transparent 1px);
+        background-image:
+          linear-gradient(0deg, transparent 79px, #abced4 79px, transparent 81px),
+          linear-gradient(#eee 1px, transparent 1px);
+
+        background-size: 100% 28px;
+          
+        font: 18px/28px "Quattrocento", "Lucida Grande", Verdana, Arial, sans-erif;
+
+        color: #444;
+        box-shadow: 0 0 6px #aaa;
+      }
+
+      @media only screen and (max-width: 480px) {
+      
+        body {
+          padding-left: 50px;
+
+          background-image:
+            -webkit-linear-gradient(0deg, transparent 29px, #abced4 29px, transparent 31px),
+            -webkit-linear-gradient(#eee .05em, transparent .05em);
+          background-image:
+            -moz-linear-gradient(0deg, transparent 29px, #abced4 29px, transparent 31px),
+            -moz-linear-gradient(#eee .05em, transparent .05em);
+          background-image:
+            -ie-linear-gradient(0deg, transparent 29px, #abced4 29px, transparent 31px),
+            -ie-linear-gradient(#eee .05em, transparent .05em);
+          background-image:
+            -o-linear-gradient(0deg, transparent 29px, #abced4 29px, transparent 31px),
+            -o-linear-gradient(#eee .05em, transparent .05em);
+          background-image:
+            linear-gradient(0deg, transparent 29px, #abced4 29px, transparent 31px),
+            linear-gradient(#eee .05em, transparent .05em);
+        }
+
+      }
+
+      p, dl, ol, ul, blockquote {
+        margin: 0 0 28px;
+      }
+
+      h1 {
+        margin: 0 0 28px;
+        font-family: "Cabin Sketch", cursive;
+      }
+
+      .post {
+        position: relative;
+        margin-bottom: 56px;
+      }
+
+      .post:before {
+        font: 3em Steedicons;
+        position: absolute;
+        left: -85px; top: -.6em;
+      }
+      .text:before { left: -75px; }
+
+      @media only screen and (max-width: 480px) {
+        .post:before {
+          left: -45px;
+          font-size: 1.5em;
+        }
+        .text:before { left: -43px; }
+      }
+
+      .text:before  { content: "C"; }
+      .photo:before { content: "J"; }
+      .audio:before { content: "B"; }
+      .video:before { content: "r"; }
+      .quote:before { content: "n"; }
+      .chat:before  { content: "K"; }
+
+      .post h1 {
+        font-size: 1em;
+        text-transform: uppercase;
+      }
+
+      .photo img,
+      .post iframe {
+        display: block;
+        margin: 0 -14px 28px;
+        padding: 14px;
+        max-width: 100%;
+        background: #FFF;
+        box-shadow: 0 0 8px #555;
+        -webkit-transform: rotate(1deg);
+        -webkit-transition: -webkit-transform .2s linear;
+      }
+
+      .photo:nth-child(odd) img {
+        -webkit-transform: rotate(-1deg);
+      }
+
+      .photo img:hover {
+        -webkit-transform: rotate(0);
+      }
+
+      .quote blockquote,
+      .chat ol {
+        margin: 0 0 28px -9px;
+        padding: 28px 9px 28px 27px;
+        border-left: 9px solid #DDD;
+        background: #FFF;
+        box-shadow: 0 0 6px rgba(0,0,0,.5);
+      }
+
+      .quote blockquote footer {
+        font-size: 15px;
+        color: #777;
+      }
+
+      .quote blockquote p + footer {
+        margin-top: -28px;
+      }
+
+      .chat ol {
+        list-style: none;
+      }
+
+      @media only screen and (min-width: 780px) {
+
+        .extras {
+          position: absolute;
+          top: 112px; right: -120px;
+        }
+
+      }
+
+      .nav ul {
+        padding: 0;
+        list-style: none;
+        font-family: "Cabin Sketch", cursive;
+      }
+
+      .nav a {
+        color: #444;
+        letter-spacing: 1px;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .nav a:hover,
+      .nav a:focus {
+        border-bottom: 2px solid #DDD;
+        color: #Ec5846;
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <header>
+      <h1>{Title}</h1>
+    </header>
+
+    {block:Posts}
+
+    {block:Text} 
+    <article class="post text">
+
+      {block:Title}
+      <h1>{Title}</h1>
+      {/block:Title}
+
+      {Body}
+
+    </article>
+    {/block:Text}
+
+    {block:Photo}
+    <article class="post photo">
+
+      {LinkOpenTag}
+        <img src="{PhotoURL-500}" alt="{ALT}">
+      {LinkCloseTag}
+
+      {block:HighRes}
+      <p><a href="{PhotoURL-HighRes}">View in High-Res</a></p>
+      {/block:HighRes}
+
+      {block:Caption}
+      {Caption}
+      {/block:Caption}
+
+    </article>
+    {/block:Photo}
+
+    {block:Video}
+    <article class="post video">
+
+      {Video-500}
+
+      {block:Caption}
+      {Caption}
+      {/block:Caption}
+
+    </article>
+    {/block:Video}
+
+    {block:Quote}
+    <article class="post quote">
+
+      <blockquote>
+        {Quote}
+        {block:Source}
+        <footer>
+          {Source}
+        </footer>
+        {/block:Source}
+      </blockquote>
+
+    </article>
+    {/block:Quote}
+
+    {/block:Posts}
+
+    <div class="extras">
+
+      {block:HasPages}
+
+      <nav class="nav">
+        <ul>
+          {block:Pages}
+          <li><a href="{URL}">{Label}</a></li>
+          {/block:Pages}
+        </ul>
+      </nav>
+
+      {/block:HasPages}
+
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="https://raw.github.com/daneden/Baseline.js/master/jquery.baseline.js"></script>
+    <script>$(window).load(function() { $("img,iframe").baseline(28); });</script>
+
+  </body>
+
+</html>
