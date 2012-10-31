@@ -139,6 +139,7 @@
       }
 
       .text:before  { content: "C"; }
+      .link:before  { content: "8"; }
       .photo:before { content: "J"; }
       .audio:before { content: "B"; }
       .video:before { content: "r"; }
@@ -245,6 +246,18 @@
 
     </article>
     {/block:Text}
+
+    {block:Link}
+    <article class="post link">
+
+      <h1><a href="{URL}" {Target}>{Name}</a></h1>
+
+      {block:Description}
+      {Description}
+      {/block:Description}
+
+    </article>
+    {/block:Link}
 
     {block:Photo}
     <article class="post photo">
