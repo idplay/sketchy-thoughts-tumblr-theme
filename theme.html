@@ -196,7 +196,8 @@
 
         .extras {
           position: absolute;
-          top: 112px; right: -120px;
+          top: 112px; left: 100%;
+          margin-left: 20px;
         }
 
       }
@@ -212,6 +213,7 @@
         letter-spacing: 1px;
         text-decoration: none;
         text-transform: uppercase;
+        white-space: nowrap;
       }
 
       .nav a:hover,
@@ -333,6 +335,9 @@
       <nav class="nav">
         <ul>
           <li><a href="/archive">Archive</a></li>
+          {block:AskEnabled}
+          <li><a href="/ask">{AskLabel}</a></li>
+          {/block:AskEnabled}
           {block:Pages}
           <li><a href="{URL}">{Label}</a></li>
           {/block:Pages}
