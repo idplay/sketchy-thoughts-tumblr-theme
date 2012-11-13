@@ -16,6 +16,8 @@ the following post types are implemented:
 * Chat posts
 * Photo posts (with high-res support)
 * Video posts
+* Answer posts
+* Link posts
 
 ## Post Icons
 
