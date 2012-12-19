@@ -1,6 +1,6 @@
 # Sketchy Thoughts Tumblr Theme
 
-Sketchy Thoughts is a playful, fun and inspirational Tumblr Theme inspired by
+[Sketchy Thoughts][st] is a playful, fun and inspirational Tumblr Theme inspired by
 the creativity that only pen and paper gives. It's small, focused and degrades
 gracefully in older browsers.
 
@@ -21,7 +21,7 @@ the following post types are implemented:
 
 ## Post Icons
 
-Sketchy Thoughts uses Steedicons to differiantiate the different Tumblr post
+Sketchy Thoughts uses [Steedicons][si] to differiantiate the different Tumblr post
 types. When Sketchy Thoughts is used through Tumblr's theme hosting service
 the required icons are included as assets. If Sketchy Thoughts is used outside
 of that hosting service, you'll have to add Steedicons font files to the themes
@@ -29,4 +29,8 @@ root directory yourself.
 
 ## License
 
-The MIT License - Copyright (c) 2012 Teddy Zetterlund
+The MIT License - Copyright (c) 2012 [Teddy Zetterlund][tz]
+
+[st]: http://sketchy-thoughts.tumblr.com/
+[si]: http://steedicons.com/
+[tz]: http://twitter.com/teddyzetterlund
